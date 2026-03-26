@@ -23,7 +23,7 @@ export function GameCard({
   brandColors = { primary: "#22c55e", secondary: "#3b82f6" }
 }: GameCardProps) {
   return (
-    <div className="relative w-80 h-[500px] bg-gradient-to-br from-slate-100 to-blue-50 rounded-3xl p-6 shadow-xl overflow-hidden">
+    <div className="relative w-[358px] h-[500px] bg-gradient-to-br from-slate-100 to-blue-50 rounded-3xl p-6 shadow-xl overflow-hidden">
       {/* Background hexagon patterns */}
       <div className="absolute top-4 left-4 w-6 h-6 opacity-20">
         <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">

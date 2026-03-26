@@ -240,15 +240,16 @@ export function CardGenerator() {
     const ctx = canvas.getContext('2d')!;
     
     // Set canvas size with 50px bleed on all sides
+    // Poker card size: 63mm × 88mm at ~1168 DPI
     const bleed = 50;
-    canvas.width = 2775; // 2575 + 50 + 50
-    canvas.height = 4200; // 4000 + 50 + 50
+    canvas.width = 2997; // 2897 + 50 + 50 (63mm at 1168 DPI)
+    canvas.height = 4148; // 4048 + 50 + 50 (88mm at 1168 DPI)
     
     // Calculate scale factor based on base dimensions
-    const baseWidth = 321.875; // 2575 / 8
-    const baseHeight = 500; // 4000 / 8
-    const scaleX = 2575 / baseWidth; // Scale for the card content area
-    const scaleY = 4000 / baseHeight;
+    const baseWidth = 362.125; // 2897 / 8
+    const baseHeight = 506; // 4048 / 8
+    const scaleX = 2897 / baseWidth; // Scale for the card content area
+    const scaleY = 4048 / baseHeight;
     
     // Apply scale and translate to center the card content
     ctx.scale(scaleX, scaleY);
@@ -438,9 +439,9 @@ export function CardGenerator() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                  <p><strong>Card Size:</strong> 56×87mm (standard playing card size)</p>
-                  <p><strong>Export Resolution:</strong> 2775×4200 pixels with 50px bleed</p>
-                  <p><strong>Card Content Area:</strong> 2575×4000 pixels (centered)</p>
+                  <p><strong>Card Size:</strong> 63×88mm (poker card size)</p>
+                  <p><strong>Export Resolution:</strong> 2997×4148 pixels with 50px bleed</p>
+                  <p><strong>Card Content Area:</strong> 2897×4048 pixels (centered)</p>
                   <p><strong>Print DPI:</strong> ~1168 DPI for professional quality</p>
                   <p className="text-green-600 font-medium">✓ Ready for professional printing with bleed area</p>
                 </div>
